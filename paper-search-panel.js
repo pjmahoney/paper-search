@@ -1,5 +1,6 @@
 import './paper-search-bar.js';
 import './paper-filter-dialog.js';
+import { Polymer } from '@polymer/polymer/polymer-legacy.js';
 
 Polymer({
 		is: 'paper-search-panel',
