@@ -1,3 +1,5 @@
+import { Polymer } from '@polymer/polymer/polymer-legacy.js';
+
 Polymer({
 		is: 'paper-search-bar',
 
