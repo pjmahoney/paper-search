@@ -10,7 +10,7 @@
 		<script src="../../test-fixture/test-fixture-mocha.js"></script>
 		<script src="../../iron-test-helpers/mock-interactions.js"></script>
 
-		<link rel="import" href="../paper-search-bar.html">
+		<script type="module" src="../paper-search-bar.js"></script>
 		<link rel="import" href="../../test-fixture/test-fixture.html">
 	</head>
 	<body>
@@ -21,60 +21,61 @@
 			</template>
 		</test-fixture>
 
-		<script>
-			suite('<paper-search-bar>', function() {
-				suite('clear behavior', function() {
-					var element;
+		<script type="module">
+import '../paper-search-bar.js';
+suite('<paper-search-bar>', function() {
+    suite('clear behavior', function() {
+        var element;
 
-					setup(function() {
+        setup(function() {
 						element = fixture('TrivialElement');
-					});
+        });
 
-					test('removes input when tapping clear', function() {
+        test('removes input when tapping clear', function() {
 						element.query = 'query';
 						element._clear();
 						expect(element.query).to.be.eql('');
-					});
+        });
 
-					test('fires clear event when clicking clear', function(done) {
+        test('fires clear event when clicking clear', function(done) {
 						element.addEventListener('paper-search-clear', function() {
-							done();
+                done();
 						});
 						element._clear();
-					});
-				});
+        });
+    });
 
-				suite('filter behavior', function() {
-					var element;
+    suite('filter behavior', function() {
+        var element;
 
-					setup(function() {
+        setup(function() {
 						element = fixture('TrivialElement');
-					});
+        });
 
-					test('fires filter event when clicking filter', function(done) {
+        test('fires filter event when clicking filter', function(done) {
 						element.addEventListener('paper-search-filter', function() {
-							done();
+                done();
 						});
 						element._filter();
-					});
-				});
+        });
+    });
 
-				suite('search behavior', function() {
-					var element;
+    suite('search behavior', function() {
+        var element;
 
-					setup(function() {
+        setup(function() {
 						element = fixture('TrivialElement');
-					});
+        });
 
-					test('fires search event when pressing enter', function(done) {
+        test('fires search event when pressing enter', function(done) {
 						element.addEventListener('paper-search-search', function() {
-							done();
+                done();
 						});
 						MockInteractions.pressEnter(element);
-					});
-				});
-			});
-		</script>
+        });
+    });
+});
+</script>
 
 	</body>
 </html>
