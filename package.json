@@ -1,6 +1,5 @@
 {
   "name": "paper-search",
-  "flat": true,
   "version": "3.0.0",
   "description": "A Material Design search bar",
   "contributors": [
