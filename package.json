@@ -34,7 +34,7 @@
     "@polymer/paper-spinner": "^3.0.0-pre.1",
     "@polymer/paper-styles": "^3.0.0-pre.1",
     "@polymer/polymer": "^3.0.0-pre.1",
-    "paper-more-button": "git+ssh://git@github.com:pjmahoney/paper-more-button.git"
+    "paper-more-button": "git+https://github.com/pjmahoney/paper-more-button.git"
   },
   "devDependencies": {}
 }
